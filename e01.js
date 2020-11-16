@@ -6,7 +6,11 @@ if (!PORT) {
     process.exit(0);
 }
 
-http.createServer(function (req,res) {
+const serveur = http.createServer(function (req,res) {
     res.write('Hello Wolrd!');
     res.end();
-}).listen(PORT)
+});
+
+serveur.listen(PORT, () => {
+    console.log("Server started at http://localhost:", PORT);
+});
