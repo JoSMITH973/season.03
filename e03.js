@@ -1,10 +1,10 @@
 const http = require('http');
 const fs = require('fs');
-const PORT = process.argv[2];
+const PORT = process.argv[2] || 4242;
 
-if (!PORT) {
-    PORT = "4242";
-}
+// if (!PORT) {
+//     let PORT = 4242;
+// }
 
 const serveur = http.createServer(function (req,res) {
     console.log(req.method);
